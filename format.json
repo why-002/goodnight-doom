@@ -1,0 +1,51 @@
+{
+    "name": "classification_resonse",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "required": ["items"],
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "type":"object",
+                "properties": {
+                    "index": {
+                      "type": "string"
+                    },
+                    "classification": {
+                      "type": "object",
+                      "properties": {
+                        "is_political": {
+                          "type": "boolean"
+                        },
+                        "is_politician_related": {
+                          "type": "boolean"
+                        },
+                        "is_doom_posting": {
+                          "type": "boolean"
+                        },
+                        "is_sensational": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "is_political",
+                        "is_politician_related",
+                        "is_doom_posting",
+                        "is_sensational"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "index",
+                    "classification"
+                  ],
+                  "additionalProperties": false
+            }
+          }
+      }
+    }
+  }
