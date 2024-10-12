@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "goodnight-doom",
+    "version": "1.0",
+    "description": "Hides Reddit posts based on their titles",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.reddit.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }

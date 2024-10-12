@@ -17,4 +17,4 @@ def predict():
 
 # load the model and start web api
 if __name__ == 'main':
-    app.run()
+    app.run(ssl_context='adhoc')
